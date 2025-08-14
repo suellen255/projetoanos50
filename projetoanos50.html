@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anos 50 - Era Dourada</title>
+    <link rel="icon" href="faviicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, serif;
+            background: #FFD700;
+            color: #8B4513;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            background: #FFA500;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 3px solid #CD853F;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8B4513;
+            font-style: italic;
+        }
+
+        .page {
+            display: none;
+            background: #F4E4BC;
+            padding: 30px;
+            border-radius: 10px;
+            border: 2px solid #CD853F;
+            margin: 20px 0;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .nav-btn {
+            background: #FFD700;
+            border: 2px solid #CD853F;
+            padding: 15px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            color: #8B4513;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #FFA500;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: #CD853F;
+            color: #FFD700;
+        }
+
+        .back-btn {
+            background: #CD853F;
+            color: #FFD700;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            background: #8B4513;
+        }
+
+        h2 {
+            color: #8B4513;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #CD853F;
+            font-size: 1.4rem;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #FFED4E;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #CD853F;
+            margin: 20px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: #FFED4E;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #CD853F;
+        }
+
+        .card h4 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Anos 50 - Era Dourada 🌟</h1>
+            <p class="subtitle">Uma viagem pela década mais icônica do século XX</p>
+        </header>
+
+        <!-- Página Inicial -->
+        <div class="page active" id="home">
+            <h2>Bem-vindo aos Anos 50!</h2>
+            <p>Os anos 50 foram uma década de transformação, otimismo e prosperidade. Após o fim da Segunda Guerra Mundial, o mundo vivia um período de reconstrução e esperança no futuro.</p>
+            
+            <div class="highlight">
+                <strong>Explore cada aspecto desta década incrível:</strong>
+            </div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showPage('historia')">📚 História</button>
+                <button class="nav-btn" onclick="showPage('musica')">🎵 Música</button>
+                <button class="nav-btn" onclick="showPage('culinaria')">🍽️ Culinária</button>
+                <button class="nav-btn" onclick="showPage('vida')">🏠 Vida Cotidiana</button>
+                <button class="nav-btn" onclick="showPage('moda')">👗 Moda</button>
+            </div>
+        </div>
+
+        <!-- Página História -->
+        <div class="page" id="historia">
+            <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+            <h2>📚 História dos Anos 50</h2>
+            
+            <h3>Contexto Mundial</h3>
+            <p>A década de 1950 foi marcada pelo fim da Segunda Guerra Mundial e o início da Guerra Fria. O mundo se dividia entre duas superpotências: Estados Unidos e União Soviética.</p>
+
+            <h3>Principais Eventos</h3>
+            <ul>
+                <li><strong>1950:</strong> Início da Guerra da Coreia</li>
+                <li><strong>1953:</strong> Morte de Stalin</li>
+                <li><strong>1955:</strong> Criação do Pacto de Varsóvia</li>
+                <li><strong>1957:</strong> Lançamento do Sputnik pela URSS</li>
+                <li><strong>1959:</strong> Revolução Cubana</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Curiosidade:</strong> Os anos 50 ficaram conhecidos como "Golden Age" (Era Dourada) devido ao crescimento econômico e ao otimismo da época.
+            </div>
+
+            <h3>No Brasil</h3>
+            <p>O Brasil vivia o governo de Getúlio Vargas (1951-1954) e depois Juscelino Kubitschek (1956-1961), com o famoso plano "50 anos em 5". Foi o período de construção de Brasília e grande desenvolvimento industrial.</p>
+        </div>
+
+        <!-- Página Música -->
+        <div class="page" id="musica">
+            <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+            <h2>🎵 Música dos Anos 50</h2>
+            
+            <h3>O Nascimento do Rock and Roll</h3>
+            <p>Os anos 50 marcaram o nascimento do rock and roll, revolucionando a música popular. Elvis Presley se tornou o "Rei do Rock", influenciando gerações.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>🎸 Rock and Roll</h4>
+                    <p>Elvis Presley, Chuck Berry, Little Richard transformaram a música popular.</p>
+                </div>
+                <div class="card">
+                    <h4>🎺 Jazz</h4>
+                    <p>Miles Davis, John Coltrane levaram o jazz a novos patamares.</p>
+                </div>
+                <div class="card">
+                    <h4>🎤 Crooners</h4>
+                    <p>Frank Sinatra, Dean Martin dominavam as paradas de sucesso.</p>
+                </div>
+            </div>
+
+            <h3>Sucessos da Época</h3>
+            <ul>
+                <li>"Rock Around the Clock" - Bill Haley</li>
+                <li>"Hound Dog" - Elvis Presley</li>
+                <li>"Johnny B. Goode" - Chuck Berry</li>
+                <li>"That's Amore" - Dean Martin</li>
+                <li>"Fly Me to the Moon" - Frank Sinatra</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>No Brasil:</strong> Surgia a Bossa Nova com João Gilberto e Tom Jobim, revolucionando a música brasileira.
+            </div>
+        </div>
+
+        <!-- Página Culinária -->
+        <div class="page" id="culinaria">
+            <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+            <h2>🍽️ Culinária dos Anos 50</h2>
+            
+            <h3>A Era dos Eletrodomésticos</h3>
+            <p>Os anos 50 trouxeram uma revolução na cozinha com novos eletrodomésticos: geladeiras, liquidificadores, batedeiras elétricas e fornos modernos.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>🥘 Pratos Populares</h4>
+                    <ul>
+                        <li>Casseroles (caçarolas)</li>
+                        <li>TV Dinners</li>
+                        <li>Jell-O (gelatinas)</li>
+                        <li>Fondue</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🍰 Sobremesas</h4>
+                    <ul>
+                        <li>Bolo de cenoura</li>
+                        <li>Torta de maçã</li>
+                        <li>Milk-shakes</li>
+                        <li>Sundaes</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Comida Brasileira</h3>
+            <p>No Brasil, a culinária dos anos 50 misturava tradições regionais com influências internacionais. Pratos como feijoada, churrasco e doces caseiros eram populares.</p>
+
+            <div class="highlight">
+                <strong>Curiosidade:</strong> Foi nos anos 50 que surgiram os primeiros fast-foods e o conceito de "comida rápida" se popularizou.
+            </div>
+
+            <h3>Bebidas da Época</h3>
+            <ul>
+                <li>Coca-Cola (em expansão mundial)</li>
+                <li>Milk-shakes</li>
+                <li>Coquetéis clássicos</li>
+                <li>Café coado</li>
+                <li>Guaraná (no Brasil)</li>
+            </ul>
+        </div>
+
+        <!-- Página Vida -->
+        <div class="page" id="vida">
+            <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+            <h2>🏠 Vida Cotidiana nos Anos 50</h2>
+            
+            <h3>A Família Tradicional</h3>
+            <p>Os anos 50 foram marcados pelo modelo de família nuclear: pai trabalhador, mãe dona de casa e filhos. Era a época do "American Dream" e dos subúrbios.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>🏡 Casa</h4>
+                    <p>Casas nos subúrbios, jardins bem cuidados, garagem para o carro da família.</p>
+                </div>
+                <div class="card">
+                    <h4>📺 Entretenimento</h4>
+                    <p>Televisão se popularizou, programas de variedades, filmes de Hollywood.</p>
+                </div>
+                <div class="card">
+                    <h4>🚗 Transporte</h4>
+                    <p>Carros grandes e coloridos, símbolo de status e liberdade.</p>
+                </div>
+            </div>
+
+            <h3>Tecnologias da Época</h3>
+            <ul>
+                <li>Televisão em preto e branco</li>
+                <li>Rádio (ainda muito popular)</li>
+                <li>Telefone fixo</li>
+                <li>Eletrodomésticos modernos</li>
+                <li>Discos de vinil</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Estilo de Vida:</strong> Era uma época de otimismo, crescimento econômico e crença no progresso tecnológico.
+            </div>
+
+            <h3>Lazer e Diversão</h3>
+            <p>As famílias se divertiam com piqueniques, drive-ins, bailes, programas de TV e idas ao cinema. Os jovens frequentavam lanchonetes e danceterias.</p>
+        </div>
+
+        <!-- Página Moda -->
+        <div class="page" id="moda">
+            <button class="back-btn" onclick="showPage('home')">← Voltar</button>
+            <h2>👗 Moda dos Anos 50</h2>
+            
+            <h3>Elegância e Feminilidade</h3>
+            <p>A moda dos anos 50 era sinônimo de elegância. As mulheres usavam vestidos que realçavam a silhueta, com cintura marcada e saias amplas.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h4>👗 Moda Feminina</h4>
+                    <ul>
+                        <li>Vestidos rodados</li>
+                        <li>Saias godê</li>
+                        <li>Cintura bem marcada</li>
+                        <li>Cardigãs e casaquinhos</li>
+                        <li>Sapatos de salto alto</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h4>🤵 Moda Masculina</h4>
+                    <ul>
+                        <li>Ternos bem cortados</li>
+                        <li>Gravatas largas</li>
+                        <li>Suspensórios</li>
+                        <li>Chapéus elegantes</li>
+                        <li>Sapatos de couro</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Ícones da Moda</h3>
+            <ul>
+                <li><strong>Marilyn Monroe:</strong> Vestidos justos e sensuais</li>
+                <li><strong>Grace Kelly:</strong> Elegância clássica</li>
+                <li><strong>James Dean:</strong> Jaqueta de couro e jeans</li>
+                <li><strong>Audrey Hepburn:</strong> Estilo sofisticado</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>Revolução:</strong> Christian Dior lançou o "New Look" em 1947, influenciando toda a década de 50 com silhuetas femininas e elegantes.
+            </div>
+
+            <h3>Acessórios Populares</h3>
+            <p>Lenços no pescoço, luvas, bolsas pequenas, óculos de sol, pérolas e broches eram acessórios essenciais para completar o visual elegante da época.</p>
+
+            <h3>Cores da Época</h3>
+            <p>Rosa, azul-bebê, amarelo-pastel, verde-menta e, claro, muito dourado e tons terrosos que remetiam à prosperidade e elegância.</p>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Esconde todas as páginas
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Remove classe active de todos os botões
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Mostra a página selecionada
+            document.getElementById(pageId).classList.add('active');
+
+            // Adiciona classe active ao botão correspondente (se não for home)
+            if (pageId !== 'home') {
+                const activeButton = document.querySelector(`[onclick="showPage('${pageId}')"]`);
+                if (activeButton) {
+                    activeButton.classList.add('active');
+                }
+            }
+
+            // Rola para o topo
+            window.scrollTo(0, 0);
+        }
+
+        // Adiciona efeito hover nos botões
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('active')) {
+                    this.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96f083cfe253f612',t:'MTc1NTE3NTE2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
